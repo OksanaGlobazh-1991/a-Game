@@ -10,23 +10,25 @@ const getRandomNumber = function (n, m) {
 }
 console.log(getRandomNumber(6, 12));
 
-function getUserNumber(str) {
-  const n = prompt('str');
-  if (isNumber(n)) return + n;
+// function getUserNumber(str) {
+//   const n = prompt('str');
+//   if (isNumber(n)) return + n;
 
-  if (n === null) return null;
-}
-getUserNumber(str);
+//   if (n === null) return null;
+// }
+// getUserNumber(str);
 
 function gameBot () {
   const randomNum = getRandomNumber(1, 100);
+ 
+  
   console.log(randomNum);
-    return function checkNum () {
-    const userNum = prompt('Угадай число от 0 до 100');
+
+     function checkNum () {
+      const userNum = prompt('Угадай число от 0 до 100');
 
     if (userNum === null) return alert('Игра окончена');
   
-  }
     if (userNum > randomNum) {
     alert('Загаданное число меньше');
     return checkNum;
@@ -45,8 +47,5 @@ function gameBot () {
   if (userNum === randomNum) {
     alert('Поздравляю, Вы угадали!!!');
   }
-};
-
+}
 gameBot();
-
-
